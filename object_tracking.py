@@ -107,4 +107,9 @@ if __name__ == '__main__':
     tracking(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4],
              sys.argv[5], sys.argv[6], sys.argv[7], sys.argv[8],
              sys.argv[9], sys.argv[10])
+    # tracking('/home/hdtx/code/minio_server/video/898576699883520/5zhen.mp4',
+    #          '/home/hdtx/code/minio_server/mottxt/898576699883520/', '587.9098138490656', '207.26893592447186',
+    #          '698.3459231726033', '277.27704519712927', '2', '4',
+    #          '3', 'object24')
+
 

@@ -91,7 +91,7 @@ def paint(path2, path1, path3):
 
 
 if __name__ == '__main__':
-    # paint('D:/303Project/gsb_business-master/data/video/805808560406528/002.avi',
+    # paint('/home/hdtx/code/minio_servervideo/898560719585359/5zhen.mp4',
     #       'D:/303Project/gsb_business-master/data/mottxt/805808560406528/mot.txt',
     #       'D:/303Project/gsb_business-master/data/motimg/805808560406528/')
     import sys

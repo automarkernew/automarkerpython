@@ -205,6 +205,6 @@ def del_file(path_data):
 if __name__ == "__main__":
     import sys
     # mot(str(sys.argv[1]))
-    # mot('C:/Users/Lenovo/Desktop/yolov5/003.avi', 'C:/Users/Lenovo/Desktop/txt/',
-    #     'C:/Users/Lenovo/Desktop/txt3/')
+    # mot('/home/hdtx/code/minio_servervideo/898560719585359/5zhen.mp4', '/home/hdtx/code/minio_server/txt/898560719585359/',
+    #     '/home/hdtx/code/minio_server/mottxt/898560719585359/')
     mot(sys.argv[1], sys.argv[2], sys.argv[3])
