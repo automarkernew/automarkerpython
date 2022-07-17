@@ -47,18 +47,20 @@ def video2img(video, images):
                 f.write(str(size[0]))
                 f.write(' ')
                 f.write(str(size[1]))
-                f.write('\n')
+                f.write(' ')
+                # f.write('\n')
         if success:
             cv2.imwrite(images + str(c) + '.jpg', frame)
             c = c + 1
         else:
             break
-
+    with open(images + 'size.txt', 'a') as f:
+        f.write(str(c-1))
     cap.release()
 
 
 if __name__ == '__main__':
     import sys
-    # video2img('/home/hdtx/code/minio_server/video/897813479161856/5zhen.mp4', '/home/hdtx/code/minio_server/motimg/897813479161856/')
+    # video2img('/home/hdtx/code/minio_server/video/901480240381958/rgb.jpg', '/home/hdtx/code/minio_server/motimg/901480240381958/')
 
     video2img(sys.argv[1], sys.argv[2])
