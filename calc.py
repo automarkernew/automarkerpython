@@ -50,8 +50,8 @@ def kkk(x1, y1, x2, y2, x3, y3):
 
 
 def calc(src, dst, visible_mottxt_path, infrared_mottxt_path, width, height):
-    a = [int(x) for x in src.split(',')]
-    b = [int(x) for x in dst.split(',')]
+    a = [float(x) for x in src.split(',')]
+    b = [float(x) for x in dst.split(',')]
     srcPoints = np.float32(a)
     dstPoints = np.float32(b)
     srcPoints.resize((len(srcPoints) // 2, 2))
@@ -77,11 +77,11 @@ def calc(src, dst, visible_mottxt_path, infrared_mottxt_path, width, height):
 
         for line in lines:
             line_list = line.split()
-            isin, cor_new = get_cor(line_list[2:], H, int(width), int(height))
+            isin, cor_new = get_cor(line_list[2:], H, float(width), float(height))
             if isin:
                 str_list = []
                 str_list.extend(line_list[:2])
-                str_list.extend([int(x) for x in cor_new])
+                str_list.extend(["{}".format(float(x), '.2f') for x in cor_new])
                 f_mot_txt.write(" ".join(str(x) for x in str_list) + '\n')
 
         f_mot_txt.close()
@@ -93,7 +93,7 @@ def calc(src, dst, visible_mottxt_path, infrared_mottxt_path, width, height):
 
 
 def get_cor(old_cor, H, width, height):
-    old_cor = [int(x) for x in old_cor]
+    old_cor = [float(x) for x in old_cor]
     old_cor = np.float32(old_cor)
     old_cor.resize((2, 1, 2))
     new_cor = cv2.perspectiveTransform(src=old_cor, m=H)
