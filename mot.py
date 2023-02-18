@@ -205,6 +205,7 @@ def del_file(path_data):
 if __name__ == "__main__":
     import sys
     # mot(str(sys.argv[1]))
-    # mot('/home/hdtx/code/minio_servervideo/898560719585359/5zhen.mp4', '/home/hdtx/code/minio_server/txt/898560719585359/',
-    #     '/home/hdtx/code/minio_server/mottxt/898560719585359/')
+    # mot('/home/homefun/code/auto/minio_server/video/1057336131059751/DJI_20220714130355_0030_W.MP4',
+    #     '/home/homefun/code/auto/minio_server/txt/1057336131059751/',
+    #     '/home/homefun/code/auto/minio_server/mottxt/1057336131059751/')
     mot(sys.argv[1], sys.argv[2], sys.argv[3])
